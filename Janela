@@ -1,0 +1,22 @@
+package Interface;
+
+import javax.swing.JFrame;
+
+class Janela extends JFrame {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public Janela() {
+		setTitle("Calculadora-W");
+		setSize(400, 300);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new Janela();
+	}
+}

@@ -1,22 +1,43 @@
 package Interface;
 
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 class Janela extends JFrame {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-
-	public Janela() {
-		setTitle("Calculadora-W");
-		setSize(400, 300);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setVisible(true);
-	}
-	
 	public static void main(String[] args) {
 		new Janela();
 	}
+	
+	private static final long serialVersionUID = 1L;
+
+	public Janela() {
+//		Configuração da janela
+		setTitle("Calculadora-W");
+		setVisible(true);
+		setSize(400, 400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		setLocationRelativeTo(null);
+		setLayout(null);
+		
+//		configuração dos botões
+		JButton jButton = new JButton();
+		jButton.setBounds(120, 120, 150, 40);
+		jButton.setText("TESTANDO");
+		
+		
+		Font fonte = (new Font("Arial", Font.BOLD, 20));
+		jButton.setFont(fonte);
+		
+		
+		jButton.setForeground(new Color(237, 241, 238));
+		jButton.setBackground(new Color(9, 10, 9));
+		
+		add(jButton);
+	}
+	
 }

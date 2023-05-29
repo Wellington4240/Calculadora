@@ -26,9 +26,15 @@ class Janela extends JFrame {
 		
 //		configuração dos botões
 		JButton jButton = new JButton();
-		jButton.setBounds(120, 120, 150, 40);
-		jButton.setText("TESTANDO");
+		jButton.setBounds(40, 50, 60, 40);
+		jButton.setText("1");
 		
+		String[] numero = {"Botão 1, Botão 2, Botão 3, Botão 4"};
+		
+		for(String botao : numero) {
+			JButton Numeros1 = new JButton(botao);
+			jButton.add(Numeros1);
+		}
 		
 		Font fonte = (new Font("Arial", Font.BOLD, 20));
 		jButton.setFont(fonte);

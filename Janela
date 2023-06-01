@@ -1,49 +1,29 @@
 package Interface;
 
-import java.awt.Color;
-import java.awt.Font;
+import java.awt.FlowLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-class Janela extends JFrame {
+public class ExemploBotoes {
 
-	public static void main(String[] args) {
-		new Janela();
-	}
-	
-	private static final long serialVersionUID = 1L;
+    public static void main(String[] args) {
+        // Criar uma janela JFrame
+        JFrame janela = new JFrame("Exemplo de Botões");
+        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        janela.setSize(300, 200);
+        janela.setLayout(new FlowLayout()); // Usar layout de fluxo para alinhar os botões
 
-	public Janela() {
-//		Configuração da janela
-		setTitle("Calculadora-W");
-		setVisible(true);
-		setSize(400, 400);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setVisible(true);
-		setLocationRelativeTo(null);
-		setLayout(null);
-		
-//		configuração dos botões
-		JButton jButton = new JButton();
-		jButton.setBounds(40, 50, 60, 40);
-		jButton.setText("1");
-		
-		String[] numero = {"Botão 1, Botão 2, Botão 3, Botão 4"};
-		
-		for(String botao : numero) {
-			JButton Numeros1 = new JButton(botao);
-			jButton.add(Numeros1);
-		}
-		
-		Font fonte = (new Font("Arial", Font.BOLD, 20));
-		jButton.setFont(fonte);
-		
-		
-		jButton.setForeground(new Color(237, 241, 238));
-		jButton.setBackground(new Color(9, 10, 9));
-		
-		add(jButton);
-	}
-	
+        // Criar um array com os rótulos dos botões
+        String[] rotulos = {"1", "2", "3", "4"};
+
+        // Criar os botões dinamicamente usando um loop
+        for (String rotulo : rotulos) {
+            JButton botao = new JButton(rotulo);
+            janela.add(botao);
+        }
+
+        // Exibir a janela
+        janela.setVisible(true);
+    }
 }
